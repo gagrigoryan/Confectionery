@@ -1,7 +1,8 @@
 <template>
-  <v-app>
+  <v-app class="app" id="app">
+    <router-view name="navbar" />
     <v-main>
-      Julia Cakes
+      <router-view />
     </v-main>
   </v-app>
 </template>
@@ -16,5 +17,9 @@ export default {
   data: () => ({
     //
   }),
+
+  computed: {
+  }
 };
 </script>
+
