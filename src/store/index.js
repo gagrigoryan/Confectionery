@@ -21,6 +21,22 @@ export default new Vuex.Store({
                 title: 'Конфеты',
                 url: '/candy'
             },
+            {
+                title: 'Шоколады',
+                url: '/chocolate'
+            },
+            {
+                title: 'Макаронс',
+                url: '/macaron'
+            },
+            {
+                title: 'Другое',
+                url: '/other'
+            },
+            {
+                title: 'Контакты',
+                url: '/contacts'
+            },
 
         ]
     },
