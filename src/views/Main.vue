@@ -1,6 +1,5 @@
 <template>
   <section class="main">
-    Main section
   </section>
 </template>
 

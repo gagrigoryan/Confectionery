@@ -5,8 +5,16 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     modules: {},
-    mutations: {},
-    actions: {},
+    mutations: {
+        SET_NAVIGATION_DRAWER (state, value) {
+            state.navigationDrawer = value
+        }
+    },
+    actions: {
+        setNavigationDrawer ({ commit }, value) {
+            commit('SET_NAVIGATION_DRAWER', value)
+        }
+    },
     state: {
         menuItems: [
             {
@@ -38,11 +46,16 @@ export default new Vuex.Store({
                 url: '/contacts'
             },
 
-        ]
+        ],
+        navigationDrawer: false
     },
     getters: {
         getMenuItems (state) {
             return state.menuItems
+        },
+
+        getNavigationDrawer (state) {
+            return state.navigationDrawer
         }
     }
 })

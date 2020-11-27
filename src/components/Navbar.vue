@@ -1,9 +1,10 @@
 <template>
   <v-app-bar
     app
-    class="navbar"
+    class="navbar px-md-10"
     height="70"
     color="#fff"
+    elevate-on-scroll
   >
     <router-link
         to="/"
@@ -58,6 +59,7 @@
       class="ml-6 hidden-md-and-up"
       width="55"
       height="55"
+      @click="clickMenu"
     >
       <div class="hamburger">
         <div class="hamburger-1"></div>
@@ -76,7 +78,12 @@ export default {
       return this.$store.getters.getMenuItems
     }
   },
-  data: () => ({})
+  data: () => ({}),
+  methods: {
+    clickMenu () {
+      this.$store.dispatch('setNavigationDrawer', true)
+    }
+  }
 }
 </script>
 
