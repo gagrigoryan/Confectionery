@@ -3,8 +3,9 @@
     app
     class="navbar px-md-10"
     height="70"
-    color="#fff"
+    :color="menuColor"
     elevate-on-scroll
+    v-scroll="scrollNavbar"
   >
     <router-link
         to="/"
@@ -26,7 +27,7 @@
       <li
         v-for="(item, index) in menuItems"
         :key="index"
-        class="mx-5"
+        class="mx-4"
       >
         <router-link :to="item.url" tag="a">
           {{ item.title }}
@@ -78,10 +79,15 @@ export default {
       return this.$store.getters.getMenuItems
     }
   },
-  data: () => ({}),
+  data: () => ({
+    menuColor: '#fff'
+  }),
   methods: {
     clickMenu () {
       this.$store.dispatch('setNavigationDrawer', true)
+    },
+
+    scrollNavbar () {
     }
   }
 }
@@ -93,6 +99,7 @@ export default {
     li
       transition: all .3s
       position: relative
+      font-weight: 600
       &:before
         content: ''
         width: 0

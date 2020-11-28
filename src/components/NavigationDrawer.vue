@@ -4,7 +4,7 @@
     fixed
     right
     width="75%"
-    color="#411B20"
+    color="#501f25"
     dark
     class="py-7"
   >

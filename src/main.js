@@ -6,10 +6,11 @@ import vuetify from './plugins/vuetify';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faInstagram} from '@fortawesome/free-brands-svg-icons'
 import { faFacebookF} from '@fortawesome/free-brands-svg-icons'
+import { faChevronDown} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import './assets/styles/app.sass'
 
-library.add(faInstagram, faFacebookF)
+library.add(faInstagram, faFacebookF, faChevronDown)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 

@@ -3,10 +3,8 @@
     <navigation-drawer v-if="$vuetify.breakpoint.smAndDown" />
     <social-bar v-if="$vuetify.breakpoint.mdAndUp" class="social" />
     <router-view name="navbar" />
-    <v-main>
-      <div class="container">
-        <router-view />
-      </div>
+    <v-main class="wrapper">
+      <router-view />
     </v-main>
   </v-app>
 </template>
@@ -33,13 +31,18 @@ export default {
 </script>
 
 <style lang="sass">
+
+@media (max-width: 600px)
+  .wrapper
+    margin: 0 !important
+    width: 100% !important
+
 .app
   height: 1000px
 
-.container
-  width: 80%
-  margin-left: 10%
-
+.wrapper
+  margin-left: 15vw
+  margin-right: 15vw
 
 </style>
 
