@@ -1,12 +1,12 @@
 <template>
-  <div class="main d-md-flex align-center justify-center px-5">
-    <v-row class="align-start">
+  <div class="main d-md-flex align-center justify-center mt-8 mt-md-0 px-4">
+    <v-row class="align-start mt-md-10">
       <v-col
           cols="12"
           class="col-md-5"
       >
         <h1>Торты</h1>
-        <h3 class="hidden-md-and-up mt-6">Торт "Какой-то"</h3>
+        <h3 class="hidden-md-and-up mt-10">Торт "Какой-то"</h3>
         <p class="mt-4 mt-md-8">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias animi deserunt earum eveniet facilis fugit incidunt, ipsam mollitia nihil.</p>
         <div class="hidden-md-and-up price">
           от <span>1500</span> руб./кг
@@ -26,8 +26,8 @@
 
         </v-img>
       </v-col>
+      <mouse-scroll class="scrollIndicator mt-8" />
     </v-row>
-    <mouse-scroll class="scrollIndicator" />
   </div>
 </template>
 
@@ -45,6 +45,8 @@ export default {
 </script>
 
 <style lang="sass" scoped>
+
+
 .main
   width: 100%
   height: calc(100vh - 70px)
@@ -52,10 +54,9 @@ export default {
 
 
 .scrollIndicator
-  position: absolute
-  left: 50%
-  bottom: 0
-  transform: translateX(-50%) scale(.7)
+  transform: scale(.7)
+  margin-left: auto
+  margin-right: auto
 
 .price
   color: $primary

@@ -72,6 +72,7 @@
 </template>
 
 <script>
+
 export default {
   name: "Navbar",
   computed: {
@@ -89,6 +90,8 @@ export default {
 
     scrollNavbar () {
     }
+  },
+  mounted() {
   }
 }
 </script>

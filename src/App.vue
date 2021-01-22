@@ -37,8 +37,6 @@ export default {
     margin: 0 !important
     width: 100% !important
 
-.app
-  height: 1000px
 
 .wrapper
   margin-left: 15vw
